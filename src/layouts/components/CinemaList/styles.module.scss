@@ -1,0 +1,57 @@
+.cinemaList {
+   position: relative;
+   overflow-y: scroll;
+
+   &::-webkit-scrollbar {
+      width: 3px;
+      height: 50%;
+
+      @media (min-width: 1024px) {
+         width: 6px;
+      }
+   }
+
+   &::-webkit-scrollbar-track {
+      background: var(--clr-scrollbar-track);
+   }
+
+   /* Handle */
+   &::-webkit-scrollbar-thumb {
+      background: var(--clr-scrollbar-thump);
+      border-radius: 0.125rem;
+   }
+
+   /* Handle on hover */
+   &::-webkit-scrollbar-thumb:hover {
+      background: var(--clr-primary);
+   }
+
+   @media (min-width: 767px) {
+      height: 500px;
+   }
+}
+
+.inputSearch {
+   padding: 0.5rem 0.75rem;
+   position: relative;
+   transition: all 0.3s ease;
+
+   input {
+      height: 2.25rem;
+      width: 100%;
+      border-radius: 0.25rem;
+      border: 1px solid var(--clr-border1);
+      background-color: var(--clr-bg3);
+      padding: 0.25rem 2.5rem 0.25rem 0.75rem;
+      font-size: 0.875rem;
+      line-height: 1.25rem;
+
+      &::placeholder {
+         color: var(--clr-bgSearch);
+      }
+
+      &:focus {
+         outline: none;
+      }
+   }
+}
